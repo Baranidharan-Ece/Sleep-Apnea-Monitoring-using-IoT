@@ -1,120 +1,273 @@
-# 💤 Sleep Apnea Monitoring using IoT
+# 🚑 Intelligent IoT Solution for Sleep Apnea
 
-![ESP32](https://img.shields.io/badge/ESP32-WiFi-blue)
-![IoT](https://img.shields.io/badge/IoT-Healthcare-green)
-![MAX30100](https://img.shields.io/badge/MAX30100-SpO2-red)
-![Arduino](https://img.shields.io/badge/Embedded-C++-orange)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
-## 📖 Overview
-
-Sleep Apnea is a serious sleep disorder where breathing repeatedly stops and starts during sleep. This project presents an IoT-enabled healthcare monitoring system that continuously measures vital physiological parameters such as blood oxygen saturation (SpO₂), heart rate, respiration, temperature, humidity, and body movement.
-
-The collected data is processed by the ESP32 microcontroller and transmitted wirelessly for remote patient monitoring, enabling early detection of abnormal breathing events.
+> **An IoT-enabled healthcare system for real-time monitoring and early detection of Sleep Apnea using Arduino Nano, ESP32, multiple physiological sensors, and cloud-based remote monitoring.**
 
 ---
 
-## ✨ Features
+## 📖 Overview
 
-- 🫀 Real-Time Heart Rate Monitoring
-- 🩸 Blood Oxygen (SpO₂) Monitoring
-- 🌡 Temperature & Humidity Monitoring
-- 😴 Respiration Monitoring
-- 📈 Body Movement Detection
-- ☁ IoT Cloud Monitoring
-- 📱 Remote Healthcare Dashboard
-- ⚡ Low Power Embedded Design
+Sleep Apnea is a serious sleep disorder in which breathing repeatedly stops during sleep. Delayed detection can lead to severe health complications including cardiovascular diseases, fatigue, and poor cognitive performance.
+
+This project presents an **Intelligent IoT Solution for Sleep Apnea** that continuously monitors a patient's physiological parameters such as respiration, heart rate, blood oxygen level (SpO₂), temperature, humidity, body movement, and snoring. When abnormal breathing patterns are detected, the system automatically activates an airflow mechanism to help restore normal breathing while simultaneously uploading patient data to the ThingSpeak cloud platform for remote monitoring.
+
+---
+
+# 🎯 Objectives
+
+* Monitor patient vital signs continuously.
+* Detect Sleep Apnea events in real time.
+* Automatically provide breathing assistance using an airflow mechanism.
+* Upload health data to the cloud for remote monitoring.
+* Reduce snoring and improve breathing during sleep.
+* Provide both Automatic and Manual operating modes.
+
+---
+
+# ✨ Features
+
+* 📊 Real-time health monitoring
+* ❤️ Heart Rate Monitoring
+* 🩸 Blood Oxygen (SpO₂) Monitoring
+* 🌡 Temperature Monitoring
+* 💧 Humidity Monitoring
+* 🌬 Respiration Monitoring
+* 🛌 Sleep Movement Detection
+* 🔊 Snoring Detection
+* ☁️ IoT Cloud Monitoring using ThingSpeak
+* ⚡ Automatic Compressor Control
+* 📟 LCD Live Status Display
+* 🔄 Automatic & Manual Modes
 
 ---
 
 # 🛠 Hardware Components
 
-- ESP32 Development Board
-- MAX30100 Pulse Oximeter
-- DHT11 Sensor
-- Respiration (Sound) Sensor
-- Accelerometer Sensor
-- Compressor
-- Power Supply
+| Component          | Purpose                                    |
+| ------------------ | ------------------------------------------ |
+| Arduino Nano       | Sensor data acquisition and system control |
+| ESP32              | Wi-Fi & Bluetooth communication            |
+| MAX30100           | Heart Rate & SpO₂ Sensor                   |
+| DHT11              | Temperature & Humidity Sensor              |
+| Respiration Sensor | Breathing Detection                        |
+| Accelerometer      | Body Movement Detection                    |
+| Relay Module       | Compressor Control                         |
+| Air Compressor     | Airflow Assistance                         |
+| Air Mask           | Air Delivery                               |
+| LCD Display        | Live Monitoring                            |
+| Power Supply       | System Power                               |
 
 ---
 
-# 💻 Software
+# 💻 Software Used
 
-- Arduino IDE
-- Embedded C++
-- ESP32 Libraries
-- IoT Cloud Platform
-
----
-
-# 🧩 System Architecture
-
-<p align="center">
-<img src="images/BlockDiagram.png" width="900">
-</p>
+* Arduino IDE
+* ThingSpeak IoT Platform
+* Embedded C / Arduino Programming
 
 ---
 
-# 🔌 Circuit Diagram
+# ⚙️ Working Principle
 
-<p align="center">
-<img src="images/CircuitDiagram.png" width="900">
-</p>
+1. The sensors continuously monitor patient health parameters.
+2. Arduino Nano collects data from all connected sensors.
+3. ESP32 processes the collected information and uploads it to ThingSpeak.
+4. The system compares the incoming values with predefined threshold levels.
+5. If Sleep Apnea is detected:
 
----
-
-# ⚙ Working Principle
-
-1. ESP32 initializes all sensors.
-2. MAX30100 continuously measures Heart Rate & SpO₂.
-3. Respiration sensor detects breathing patterns.
-4. DHT11 measures surrounding temperature and humidity.
-5. Accelerometer detects body movement during sleep.
-6. ESP32 processes all sensor readings.
-7. Data is transmitted wirelessly to the IoT dashboard.
-8. Abnormal conditions trigger alerts for caregivers.
+   * The compressor is activated.
+   * Air is delivered through the breathing mask.
+   * Patient data is continuously updated on the IoT dashboard.
+6. LCD displays the real-time system status.
 
 ---
 
-# 📊 Parameters Monitored
+# 📡 IoT Architecture
 
-| Parameter | Sensor |
-|-----------|--------|
-| Heart Rate | MAX30100 |
-| Blood Oxygen (SpO₂) | MAX30100 |
-| Respiration | Sound Sensor |
-| Temperature | DHT11 |
-| Humidity | DHT11 |
-| Body Movement | Accelerometer |
+Patient
 
----
+⬇
 
-# 🚀 Future Scope
+Sensors
 
-- AI-based Sleep Apnea Prediction
-- TinyML Edge Inference
-- Mobile Application
-- MQTT Cloud Integration
-- Doctor Dashboard
-- Automatic Emergency Alert
-- Wearable Healthcare Device
+⬇
 
----
+Arduino Nano
 
-# 📄 Documentation
+⬇
 
-- 📘 Working Principle
-- 📑 Complete Project Report
-- 📊 Circuit Diagram
-- 📈 Block Diagram
+ESP32
+
+⬇
+
+ThingSpeak Cloud
+
+⬇
+
+Doctor / Caregiver Monitoring
 
 ---
 
-# 👨‍💻 Author
+# 📁 Repository Structure
+
+```text
+Sleep-Apnea-IoT-System/
+│── README.md
+│── LICENSE
+│── Sleep_Apnea_System.ino
+│
+├── images/
+│   ├── block_diagram.png
+│   ├── circuit_diagram.png
+│   ├── workflow.png
+│   ├── prototype.jpg
+│   └── output.png
+│
+└── components/
+    └── components_list.md
+```
+
+---
+
+# 📷 Project Images
+
+## Block Diagram
+
+![Block Diagram](images/block_diagram.png)
+
+---
+
+## Circuit Diagram
+
+![Circuit Diagram](images/circuit_diagram.png)
+
+---
+
+## Workflow
+
+![Workflow](images/workflow.png)
+
+---
+
+## Prototype
+
+![Prototype](images/prototype.jpg)
+
+---
+
+# 🚀 Installation
+
+1. Clone the repository.
+
+```bash
+git clone https://github.com/Baranidharan-Ece/Sleep-Apnea-Monitoring-using-IoT.git
+```
+
+2. Open the project using Arduino IDE.
+
+3. Install the required Arduino libraries.
+
+* MAX30100
+* DHT Sensor Library
+* ESP32 Board Package
+* LiquidCrystal
+* WiFi Library
+
+4. Select the correct board and COM port.
+
+5. Upload the code.
+
+6. Power the hardware.
+
+7. Monitor live data using ThingSpeak.
+
+---
+
+# 📊 System Flow
+
+```text
+Start
+   │
+Initialize Sensors
+   │
+Read Sensor Values
+   │
+Analyze Data
+   │
+Sleep Apnea?
+   │
+ ┌───────No────────┐
+ │                 │
+Display Values     │
+ │                 │
+Upload to Cloud    │
+ │                 │
+ └──────Yes────────┘
+        │
+Activate Compressor
+        │
+Provide Airflow
+        │
+Update LCD
+        │
+Upload Data
+        │
+Repeat
+```
+
+---
+
+# ✅ Advantages
+
+* Low Cost
+* Non-invasive
+* Real-time Monitoring
+* IoT Enabled
+* Remote Healthcare Support
+* Automatic Detection
+* Early Medical Intervention
+* Easy to Use
+
+---
+
+# 🔮 Future Scope
+
+* Mobile Application Integration
+* AI-based Sleep Apnea Prediction
+* SMS & Emergency Alerts
+* Cloud Database Storage
+* Hospital Integration
+* Machine Learning Analytics
+* Wearable Device Support
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+
+# ⭐ Support
+
+If you found this project useful:
+
+⭐ Star this repository
+
+🍴 Fork this repository
+
+📢 Share it with others
+
+---
+
+# 📬 Contact
 
 **Baranidharan S**
 
-Electronics & Communication Engineering
+Electronics and Communication Engineering
 
-IoT | Embedded Systems | Healthcare Technology
+GitHub: https://github.com/Baranidharan-Ece
+
+LinkedIn: https://www.linkedin.com/in/baranidharan-sanmugam-b6a3532a5/
+
+Email: baranidharansnkdr@gmail.com
